@@ -5,7 +5,7 @@ import { Card, Button, CardTitle, CardText, CardHeader,
 const ProductCard = ({product}) => {
   let {name, category, description, price, stocked} = product
   return (
-    <div className="mb-5 col-sm-12 col-md-6 offset-md-3">
+    <div className="mb-5">
       <Card >
         <CardHeader>
           <h3> {name} </h3>

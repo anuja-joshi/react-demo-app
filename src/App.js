@@ -9,7 +9,9 @@ function App() {
     <Container>
       <div className="App">
         <Greet name="x"/>
-        <ProductList />
+        <div className="col-md-6 offset-md-3">
+          <ProductList />
+        </div>
       </div>
     </Container>
   );
