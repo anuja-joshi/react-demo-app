@@ -8,8 +8,8 @@ const ProjectContainer = () => {
   return (
     <Container>
       <Row>
-        <Col><ProjectSection title='MOST LIKED' data={projects}/></Col>
-        <Col><ProjectSection title='MOST ACTIVE' data={projects}/></Col>
+        <Col><ProjectSection title='MOST LIKED' data={projects} context='like'/></Col>
+        <Col><ProjectSection title='MOST ACTIVE' data={projects} context='active'/></Col>
       </Row>
     </Container>
   )
