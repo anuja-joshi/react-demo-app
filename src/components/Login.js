@@ -1,10 +1,11 @@
 import React from 'react';
 import { Form, FormGroup, Input, Container, 
-  Col, Row, Card, CardBody, Label, Button } from 'reactstrap';
+  Col, Row, Card, CardBody, Label, Button, FormFeedback } from 'reactstrap';
 
 import PropTypes from 'prop-types'; // for prop validation
 
-const Login = ({username, password, setUsername, setPassword, validateData}) => {
+const Login = ({username, password, setUsername, 
+  setPassword, validateData, usernameError, passwordError}) => {
   const setUsernameWrapper = (e) => {
     setUsername(e.target.value)
   }
@@ -24,12 +25,16 @@ const Login = ({username, password, setUsername, setPassword, validateData}) => 
                 <FormGroup>
                   <Label for="exampleEmail">Email</Label>
                   <Input type="email" name="email" id="exampleEmail" 
-                    placeholder="enter email" value={username} onChange={setUsernameWrapper}/>
+                    placeholder="enter email" value={username} onChange={setUsernameWrapper}
+                    invalid={(usernameError !== null)}/>
+                  <FormFeedback>{usernameError}</FormFeedback>
                 </FormGroup>
                 <FormGroup>
                   <Label for="examplePassword">Password</Label>
                   <Input type="password" name="password" id="examplePassword" 
-                    placeholder="enter password" value={password} onChange={setPasswordWrapper}/>
+                    placeholder="enter password" value={password} onChange={setPasswordWrapper}
+                   invalid={(passwordError !== null)}/>
+                  <FormFeedback>{passwordError}</FormFeedback>
                 </FormGroup>
                 <Button color="primary" onClick={validateData}>Submit</Button>
               </Form>
