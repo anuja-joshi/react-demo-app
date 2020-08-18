@@ -26,7 +26,7 @@ const LoginContainer = () => {
         alert('logged in')
       })
       .catch((err) => {
-        console.log(err)
+        console.log(err.response.data)
       })
     })
     .catch((err) => {

@@ -4,6 +4,8 @@ import { Row, Col, Container } from 'reactstrap';
 import ProjectSection from './ProjectSection';
 import projects from './../projects'
 
+
+// TODO: move this to containers
 const ProjectContainer = () => {
   return (
     <Container>
